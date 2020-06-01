@@ -1,6 +1,6 @@
 #trigger createcontact on Account
-List <contact> con = new List <contact>();
-        
+
+        List <contact> con = new List <contact>();
         for (Account acc : Accounts)
         {
             contact con1 = new contact();
