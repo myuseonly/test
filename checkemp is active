@@ -1,0 +1,7 @@
+for(employee__c emp:trigger.old)
+    {
+        if (emp.Active__c == True){
+         emp.addError('User Is active Delete Operation is not possible on active Employee');
+        }
+                }
+            }
