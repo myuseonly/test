@@ -1,0 +1,23 @@
+public class MyFirstClass {
+
+    public static void createContact(List <Account> abc)
+    {
+      List <contact> con = new List <contact>();
+        
+        for (Account acc : abc)
+        {
+            contact con1 = new contact();
+            con1.LastName = 'Kumar';
+            con1.AccountId= acc.id;
+            con.add(con1);  
+        }
+        insert con;
+    }
+
+}
+
+##Trigger
+
+trigger createcontact on Account (after insert) {
+ MyFirstClass.createContact(trigger.new);
+}
