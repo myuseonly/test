@@ -1,0 +1,13 @@
+
+
+trigger InsertEmployee on Employer__c (after insert)
+{
+    List <Employee__c> abc = new List<Employee__c>();
+        for(Employer__c newEmp: Trigger.New)
+        {
+            Employee__c emp = new Employee__c();
+            emp.First_Name__c = 'Singh';
+            emp.Employer__c=newEmp.id;
+            abc.Add(emp);
+         }
+             insert abc;
